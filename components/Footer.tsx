@@ -37,7 +37,7 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="bg-black px-6 pb-8">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-7xl">
 
         {/* ================= MAIN FOOTER ================= */}
         <div className="border-t border-white/10 py-12 md:py-16">

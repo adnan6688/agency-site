@@ -62,7 +62,7 @@ export default function Process() {
       id="process"
       className="bg-black px-6 py-28 md:py-40"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-7xl">
 
         {/* ================= HEADER ================= */}
         <motion.div
