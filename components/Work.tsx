@@ -30,11 +30,13 @@ const projects = [
     category: "SaaS Platform",
     description:
       "A clean business management platform for teams to manage operations, customers and daily workflows.",
-    image: "/projects/flowdesk.png",
+    image: "/projects/web/yep2.png",
     year: "2026",
     tags: ["Next.js", "TypeScript", "PostgreSQL"],
     links: {
-      live: "#",
+      live: "https://yeppads.com/",
+      playStore: "https://play.google.com/store/apps/details?id=agency.beuptech.yepp",
+      appStore: "https://apps.apple.com/us/app/yepp-ads/id6760607013"
     },
   },
   {
@@ -42,11 +44,12 @@ const projects = [
     category: "AI Platform",
     description:
       "An AI-powered workspace designed to automate repetitive tasks and help teams work smarter.",
-    image: "/projects/nexa-ai.png",
+    image: "/projects/app/postwagens.png",
     year: "2026",
     tags: ["AI", "Node.js", "OpenAI"],
     links: {
-      live: "#",
+      live: "http://postwagens.com/",
+      playStore : "https://play.google.com/store/apps/details?id=com.postwagens.app"
     },
   },
   {
@@ -74,19 +77,7 @@ const projects = [
     links: {
       live: "#",
     },
-  },
-  {
-    title: "AutomateX",
-    category: "Automation",
-    description:
-      "Smart business automation workflows built with n8n to connect tools, reduce manual work and save time.",
-    image: "/projects/automatex.png",
-    year: "2025",
-    tags: ["n8n", "AI", "Automation"],
-    links: {
-      live: "#",
-    },
-  },
+  }
 ];
 
 function ProjectLinks({
@@ -280,16 +271,7 @@ export default function Work() {
               </div>
 
               <div className="flex flex-col items-start gap-5 md:items-end">
-                <div className="flex flex-wrap gap-2 md:justify-end">
-                  {featuredProject.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="border border-white/10 px-3 py-1.5 text-[9px] uppercase tracking-[0.15em] text-white/35"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+               
 
                 <ProjectLinks links={featuredProject.links} />
               </div>
@@ -309,31 +291,31 @@ export default function Work() {
                 duration: 0.7,
                 delay: (index % 2) * 0.08,
               }}
-              className="group"
+              className="group w-full"
             >
-              {/* Image */}
-              <div className="relative overflow-hidden rounded-3xl bg-[#111]">
-                <div className="relative aspect-4/3 overflow-hidden">
+              {/* Image Container - Full Cover Width */}
+              <div className="relative w-full overflow-hidden rounded-3xl bg-[#111]">
+                <div className="relative aspect-video w-full overflow-hidden">
 
                   <motion.img
                     src={project.image}
                     alt={`${project.title} — ${project.category}`}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.05]"
+                    className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-[1.05]"
                   />
 
                   <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-black/25" />
 
                   {/* Number */}
-                  <div className="absolute left-5 top-5">
-                    <span className="font-viga text-sm text-white/50">
+                  <div className="absolute left-5 top-5 z-10">
+                    <span className="font-viga text-sm text-white/70">
                       {String(index + 2).padStart(2, "0")}
                     </span>
                   </div>
 
                   {/* Year */}
-                  <div className="absolute right-5 top-5">
-                    <span className="text-[10px] uppercase tracking-[0.2em] text-white/50">
+                  <div className="absolute right-5 top-5 z-10">
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-white/70">
                       {project.year}
                     </span>
                   </div>
@@ -343,7 +325,7 @@ export default function Work() {
                     href={project.links.live || "#"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute bottom-5 right-5 flex h-12 w-12 translate-y-3 items-center justify-center rounded-full bg-white text-black opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 hover:bg-[#CFFF92]"
+                    className="absolute bottom-5 right-5 z-10 flex h-12 w-12 translate-y-3 items-center justify-center rounded-full bg-white text-black opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 hover:bg-[#CFFF92]"
                   >
                     <ArrowUpRight size={19} strokeWidth={1.5} />
                   </a>
@@ -351,7 +333,7 @@ export default function Work() {
               </div>
 
               {/* Info */}
-              <div className="mt-6">
+              <div className="mt-6 w-full">
                 <div className="mb-3 flex items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <span className="h-1.5 w-1.5 rounded-full bg-[#CFFF92]" />
@@ -371,16 +353,7 @@ export default function Work() {
                 </p>
 
                 <div className="mt-5 flex flex-col gap-4">
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="border border-white/10 px-3 py-1.5 text-[9px] uppercase tracking-[0.15em] text-white/30"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                
 
                   <ProjectLinks links={project.links} />
                 </div>
