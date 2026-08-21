@@ -17,7 +17,6 @@ const projects = [
     image: "/projects/app/turfplay-bannar.png",
     year: "2026",
     featured: true,
-    tags: ["Next.js", "Node.js", "PostgreSQL"],
     links: {
       live: "#",
       playStore:
@@ -32,7 +31,6 @@ const projects = [
       "A clean business management platform for teams to manage operations, customers and daily workflows.",
     image: "/projects/web/yep2.png",
     year: "2026",
-    tags: ["Next.js", "TypeScript", "PostgreSQL"],
     links: {
       live: "https://yeppads.com/",
       playStore: "https://play.google.com/store/apps/details?id=agency.beuptech.yepp",
@@ -46,7 +44,6 @@ const projects = [
       "An AI-powered workspace designed to automate repetitive tasks and help teams work smarter.",
     image: "/projects/app/postwagens.png",
     year: "2026",
-    tags: ["AI", "Node.js", "OpenAI"],
     links: {
       live: "http://postwagens.com/",
       playStore : "https://play.google.com/store/apps/details?id=com.postwagens.app"
@@ -59,7 +56,6 @@ const projects = [
       "A modern ride and location-based mobile experience focused on simple booking and real-time tracking.",
     image: "/projects/movego.png",
     year: "2025",
-    tags: ["React Native", "Node.js", "MongoDB"],
     links: {
       live: "#",
       playStore: "#",
@@ -71,11 +67,11 @@ const projects = [
     category: "E-Commerce",
     description:
       "A scalable marketplace experience connecting customers with products through a fast and intuitive interface.",
-    image: "/projects/marketly.png",
+    image: "/projects/app/Djarna1.png",
     year: "2025",
-    tags: ["Next.js", "Express", "MongoDB"],
     links: {
-      live: "#",
+      live: "https://apps.apple.com/us/app/djarna/id6787214492",
+      appStore : "https://apps.apple.com/us/app/djarna/id6787214492"
     },
   }
 ];
@@ -361,7 +357,6 @@ export default function Work() {
             </motion.article>
           ))}
         </div>
-
       </div>
     </section>
   );

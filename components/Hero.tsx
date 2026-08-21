@@ -55,7 +55,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-20 mt-7 sm:mt-2 mx-auto max-w-250 text-center"
+          className="relative z-20 mt-7 sm:mt-10 mx-auto max-w-250 text-center"
         >
           <h1 className="text-[clamp(3.3rem,8vw,7.6rem)] font-semibold leading-[0.88] tracking-[-0.065em]">
             <span className="block text-white/90">
