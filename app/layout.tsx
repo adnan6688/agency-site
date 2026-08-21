@@ -1,6 +1,7 @@
 import { Viga, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navber";
+import PageLoader from "../components/PageLoader";
 
 const viga = Viga({
   weight: "400",
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${viga.variable} ${inter.variable}`}>
+        <PageLoader></PageLoader>
         <Navbar></Navbar>
         {children}
       </body>
