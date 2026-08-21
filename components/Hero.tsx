@@ -1,240 +1,357 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Workflow, Layout } from "lucide-react";
 import {
-  SiTypescript, 
-  SiNodedotjs, 
-  SiPython, 
-  SiMysql, 
-  SiReact, 
-  SiMongodb, 
-  SiDocker, 
-  SiDart
-} from "react-icons/si";
+  ArrowUpRight,
+  ArrowRight,
+  Sparkles,
+  Star,
+} from "lucide-react";
+import Image from "next/image";
+
+
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#070707] px-6 pt-20">
+    <section className="relative min-h-screen overflow-hidden bg-[#050505] text-white">
+    
 
-      {/* ================= BACKGROUND GLOWS & PATTERNS ================= */}
-      <div className="pointer-events-none absolute -left-20 top-1/4 h-125 w-125 rounded-full bg-[#CFFF92]/7 blur-[140px]" />
-      <div className="pointer-events-none absolute -right-20 bottom-1/4 h-125 w-125 rounded-full bg-indigo-500/5 blur-[160px]" />
+      {/* Top border */}
+      <div className="absolute left-6 right-6 top-5 h-px bg-white/15 md:left-12 md:right-12" />
 
-      {/* Subtle Radial Dot Grid Pattern */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.07]">
+      {/* Ambient glow - left */}
+      <div className="pointer-events-none absolute -left-40 -top-40 h-125 w-125 rounded-full bg-[#d9ff70]/10 blur-[150px]" />
+
+      {/* Ambient glow - center */}
+      <div className="pointer-events-none absolute left-1/2 top-[45%] h-112.5 w-112.5 -translate-x-1/2 rounded-full bg-white/2.5 blur-[120px]" />
+
+      {/* Ambient glow - right */}
+      <div className="pointer-events-none absolute -bottom-40 -right-40 h-125 w-125 rounded-full bg-[#d9ff70]/5 blur-[150px]" />
+
+      {/* Subtle grid */}
+      <div className="pointer-events-none absolute inset-0 opacity-[0.035]">
         <div
           className="h-full w-full"
           style={{
-            backgroundImage:
-              "radial-gradient(circle at 2px 2px, rgba(255,255,255,0.8) 1px, transparent 0)",
-            backgroundSize: "36px 36px",
+            backgroundImage: `
+              linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)
+            `,
+            backgroundSize: "80px 80px",
           }}
         />
       </div>
 
-      {/* ================= 3D / GEOMETRIC SHAPES & TECH/SKILL LOGOS ================= */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        
-        {/* Top Center: TypeScript */}
-        <motion.div
-          animate={{ y: [-8, 8, -8] }}
-          transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-          className="absolute left-[38%] top-[12%] hidden rounded-xl border border-white/15 bg-white/4 p-3 backdrop-blur-md md:flex items-center gap-2.5 shadow-xl"
-        >
-          <SiTypescript className="text-blue-400 text-xl" />
-          <span className="text-xs font-semibold text-white tracking-wider">TypeScript</span>
-        </motion.div>
-
-        {/* Top Right: UI/UX Design Badge */}
-        <motion.div
-          animate={{ y: [8, -8, 8] }}
-          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-          className="absolute right-[35%] top-[14%] hidden rounded-xl border border-purple-500/30 bg-purple-500/10 p-3 backdrop-blur-md md:flex items-center gap-2.5 shadow-xl"
-        >
-          <Layout className="text-purple-400 text-xl" />
-          <span className="text-xs font-semibold text-white tracking-wider">UI/UX Design</span>
-        </motion.div>
-
-        {/* Top Left: Node.js */}
-        <motion.div
-          animate={{ y: [-10, 10, -10], rotate: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
-          className="absolute left-[6%] top-[18%] hidden h-28 w-28 rounded-2xl border border-[#CFFF92]/40 bg-[#CFFF92]/10 backdrop-blur-md md:flex flex-col items-center justify-center gap-2 shadow-[0_0_30px_rgba(207,255,146,0.2)]"
-        >
-          <SiNodedotjs className="text-[#CFFF92] text-3xl" />
-          <span className="text-[10px] text-[#CFFF92] font-bold uppercase tracking-widest">Node.js</span>
-        </motion.div>
-
-        {/* Mid Left: Python */}
-        <motion.div
-          animate={{ y: [12, -12, 12] }}
-          transition={{ repeat: Infinity, duration: 7, ease: "easeInOut" }}
-          className="absolute left-[10%] top-[42%] hidden rounded-2xl border border-white/10 bg-white/3 p-4 backdrop-blur-md md:flex items-center gap-3 shadow-xl"
-        >
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-yellow-500/10">
-            <SiPython className="text-yellow-400 text-2xl" />
-          </div>
-          <div>
-            <p className="text-xs font-bold text-white">Python</p>
-            <p className="text-[10px] text-white/40">Backend & AI</p>
-          </div>
-        </motion.div>
-
-        {/* Bottom Left: Mobile App Development */}
-        <motion.div
-          animate={{ y: [-8, 8, -8], rotate: [-5, 5, -5] }}
-          transition={{ repeat: Infinity, duration: 9, ease: "easeInOut" }}
-          className="absolute left-[7%] bottom-[16%] hidden h-32 w-44 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4 backdrop-blur-md lg:flex flex-col items-center justify-center gap-2 shadow-2xl -rotate-6"
-        >
-          <SiDart className="text-emerald-400 text-3xl" />
-          <span className="text-[11px] font-semibold text-white/90">Mobile Apps</span>
-        </motion.div>
-
-        {/* Top Right: React / Next.js */}
-        <motion.div
-          animate={{ y: [10, -10, 10] }}
-          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-          className="absolute right-[8%] top-[24%] hidden rounded-2xl border border-cyan-500/30 bg-cyan-500/10 p-3.5 backdrop-blur-md md:flex items-center gap-3 shadow-[0_0_25px_rgba(6,182,212,0.2)]"
-        >
-          <SiReact className="text-cyan-400 text-2xl animate-spin-slow" />
-          <div>
-            <p className="text-xs font-bold text-white">React / Next.js</p>
-            <p className="text-[10px] text-cyan-300/70">Frontend Core</p>
-          </div>
-        </motion.div>
-
-        {/* Mid Right: n8n Automation */}
-        <motion.div
-          animate={{ y: [-10, 10, -10], rotate: [0, 6, 0] }}
-          transition={{ repeat: Infinity, duration: 7.5, ease: "easeInOut" }}
-          className="absolute right-[12%] top-[48%] hidden rounded-2xl border border-orange-500/30 bg-orange-500/10 p-3.5 backdrop-blur-md md:flex items-center gap-3 shadow-[0_0_25px_rgba(249,115,22,0.2)]"
-        >
-          <Workflow className="text-orange-400 text-2xl" />
-          <div>
-            <p className="text-xs font-bold text-white">n8n Automation</p>
-            <p className="text-[10px] text-orange-300/70">Workflow & APIs</p>
-          </div>
-        </motion.div>
-
-        {/* Bottom Right: MySQL */}
-        <motion.div
-          animate={{ y: [-12, 12, -12], rotate: [0, -8, 0] }}
-          transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
-          className="absolute right-[10%] bottom-[15%] hidden h-36 w-44 rounded-3xl border border-white/20 bg-linear-to-br from-white/5 via-blue-500/5 to-transparent p-5 backdrop-blur-xl lg:flex flex-col items-center justify-center gap-2 shadow-2xl"
-        >
-          <SiMysql className="text-blue-400 text-4xl" />
-          <span className="text-xs font-extrabold tracking-widest text-white">MySQL</span>
-        </motion.div>
-
-        {/* Bottom Center: Docker & MongoDB Badges */}
-        <motion.div
-          animate={{ y: [6, -6, 6] }}
-          transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-          className="absolute left-1/2 -translate-x-1/2 bottom-[16%] hidden md:flex items-center gap-4 rounded-full border border-white/10 bg-black/75 px-5 py-2 backdrop-blur-md shadow-lg"
-        >
-          <div className="flex items-center gap-1.5">
-            <SiDocker className="text-blue-500 text-sm" />
-            <span className="text-[11px] text-white/70">Docker</span>
-          </div>
-          <span className="text-white/20">|</span>
-          <div className="flex items-center gap-1.5">
-            <SiMongodb className="text-green-500 text-sm" />
-            <span className="text-[11px] text-white/70">MongoDB</span>
-          </div>
-        </motion.div>
-
+      {/* Huge background typography */}
+      <div className="pointer-events-none absolute bottom-[8%] left-1/2 hidden -translate-x-1/2 select-none whitespace-nowrap text-[18vw] font-black uppercase leading-none tracking-[-0.08em] text-white/2.5 lg:block">
+        DIGITAL
       </div>
 
-      {/* ================= CENTRAL MAIN CONTENT ================= */}
-      <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center text-center">
 
-        {/* Top Agency Badge */}
+
+      <div className="relative z-10 mx-auto min-h-screen max-w-375 px-5 pb-24 pt-16 sm:px-8 md:px-12 lg:px-16">
+ 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-8 inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-black/40 px-5 py-2 backdrop-blur-xl shadow-inner"
-        >
-          <span className="h-2 w-2 rounded-full bg-[#CFFF92] shadow-[0_0_12px_rgba(207,255,146,0.8)] animate-pulse" />
-          <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-white/90">
-            Digital Creative Agency
-          </span>
-        </motion.div>
-
-        {/* Main Heading */}
-        <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-[clamp(3rem,7.5vw,6.2rem)] font-extrabold uppercase leading-[0.92] tracking-tight text-white drop-shadow-lg"
+          transition={{ duration: 0.8 }}
+          className="relative z-20 mt-7 sm:mt-2 mx-auto max-w-250 text-center"
         >
-          We Make
-          <br />
-          <span className="text-[#CFFF92] drop-shadow-[0_0_35px_rgba(207,255,146,0.3)]">
-            Ideas
-          </span>
-          <br />
-          Matter<span className="text-[#CFFF92]">.</span>
-        </motion.h1>
+          <h1 className="text-[clamp(3.3rem,8vw,7.6rem)] font-semibold leading-[0.88] tracking-[-0.065em]">
+            <span className="block text-white/90">
+              We Help You To Grow
+            </span>
 
-        {/* Supporting Paragraph */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-8 max-w-lg text-sm font-normal leading-relaxed text-white/60 md:text-base"
-        >
-          We turn bold ideas into meaningful digital experiences that help ambitious brands move forward.
-        </motion.p>
-
-        {/* Action Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-10 flex flex-wrap items-center justify-center gap-4"
-        >
-          <a
-            href="#work"
-            className="group flex items-center gap-2.5 rounded-xl bg-[#CFFF92] px-7 py-4 text-xs font-bold uppercase text-black transition-all duration-300 hover:bg-white hover:shadow-[0_0_30px_rgba(207,255,146,0.5)]"
-          >
-            Explore Our Work
-            <ArrowUpRight
-              size={16}
-              className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-            />
-          </a>
-
-          <a
-            href="#about"
-            className="group flex items-center gap-2.5 rounded-xl border border-white/15 bg-white/2 px-7 py-4 text-xs font-bold uppercase tracking-wider text-white/90 backdrop-blur-md transition-all duration-300 hover:border-white/40 hover:bg-white/5 hover:text-white"
-          >
-            Discover
-            <ArrowUpRight
-              size={16}
-              className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-white/40 group-hover:text-white"
-            />
-          </a>
+            <span className="block text-white">
+              Your{" "}
+              <span className="relative text-[#d9ff70] inline-block">
+                Business
+                <span className="absolute -bottom-2 left-1/2 h-1 w-20 -translate-x-1/2 rounded-full bg-[#d9ff70] md:w-28" />
+              </span>
+            </span>
+          </h1>
         </motion.div>
-      </div>
 
-      {/* ================= BOTTOM BAR (SCROLL & LOCATION) ================= */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.8 }}
-        className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-[11px] font-medium uppercase tracking-[0.25em] text-white/40"
-      >
-        <div className="flex items-center gap-2">
-          <span className="text-[#CFFF92] text-sm">↓</span>
-          <span className="hidden sm:inline">Scroll to explore</span>
+     
+        <div className="relative mx-auto mt-8 min-h-147.5 max-w-312.5">
+  
+          <motion.a
+            href="#contact"
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.35 }}
+            className="group absolute left-0 top-8 z-30 hidden items-center gap-0 md:flex"
+          >
+            {/* icon box */}
+            <div className="flex h-11 w-11 items-center justify-center rounded-l-lg bg-white text-black transition-transform duration-300 group-hover:-translate-y-1">
+              <ArrowUpRight size={18} />
+            </div>
+
+            {/* black box */}
+            <div className="flex h-11 items-center gap-3 rounded-r-lg border border-white/20 bg-[#101010] px-4">
+              <Sparkles
+                size={15}
+                className="text-[#d9ff70]"
+              />
+
+              <div>
+                <p className="text-[12px] font-medium text-white">
+                  Appointment
+                </p>
+
+                <p className="text-[10px] text-white/40">
+                  Book Now
+                </p>
+              </div>
+            </div>
+          </motion.a>
+
+      
+          <motion.div
+            initial={{ opacity: 0, x: -50, y: 30 }}
+            animate={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="absolute left-0 top-47.5 z-30 hidden w-61.25 md:block"
+          >
+            <div className="relative rounded-[18px] bg-[#d9ff70] p-5 text-black shadow-[0_20px_70px_rgba(217,255,112,0.08)]">
+              {/* little arrow */}
+              <div className="absolute -right-1 -top-1 flex h-12 w-12 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#303030] text-white">
+                <ArrowRight size={17} />
+              </div>
+
+              <div>
+                <p className="text-3xl font-bold tracking-tight">
+                  10.2k+
+                </p>
+
+                <p className="mt-1 text-[10px] font-medium text-black/55">
+                  Active users around the world
+                </p>
+              </div>
+
+              <div className="mt-5 flex items-center justify-between">
+                {/* avatars */}
+                <div className="flex items-center">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#d9ff70] bg-[#222] text-[10px] font-bold text-white">
+                    A
+                  </div>
+
+                  <div className="-ml-3 flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#d9ff70] bg-[#555] text-[10px] font-bold text-white">
+                    R
+                  </div>
+
+                  <div className="-ml-3 flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#d9ff70] bg-[#999] text-[10px] font-bold text-black">
+                    M
+                  </div>
+
+                  <div className="-ml-3 flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#d9ff70] bg-[#eee] text-[9px] font-bold text-black">
+                    +
+                  </div>
+                </div>
+
+                {/* rating */}
+                <div className="flex items-center gap-2">
+                  <Star
+                    size={23}
+                    fill="currentColor"
+                    strokeWidth={0}
+                  />
+
+                  <div>
+                    <p className="text-lg font-bold leading-none">
+                      5
+                    </p>
+
+                    <p className="text-[9px] font-medium text-black/60">
+                      Stars
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 70, scale: 0.94 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{
+              duration: 1,
+              delay: 0.25,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+            className="absolute bottom-0 left-1/2 z-20 flex w-82.5 -translate-x-1/2 justify-center sm:w-97.5 md:w-112.5 lg:w-125"
+          >
+            {/* glow behind person */}
+            <div className="absolute bottom-10 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-[#d9ff70]/10 blur-[100px]" />
+
+            {/* circle decoration */}
+            <div className="absolute bottom-10 left-1/2 h-97.5 w-97.5 -translate-x-1/2 rounded-full border border-white/6" />
+
+            <div className="absolute bottom-14 left-1/2 h-77.5 w-77.5 -translate-x-1/2 rounded-full border border-[#d9ff70]/10" />
+
+            {/* Person Image */}
+
+            <Image
+              src="/HeroMan.png"
+              alt="Digital agency creative professional"
+              width={700}
+              height={800}
+              priority
+              className="relative z-10 h-auto w-full object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)]"
+            />
+
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, pathLength: 0 }}
+            animate={{ opacity: 1, pathLength: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+            className="absolute right-[25%] top-28.75 z-30 hidden lg:block"
+          >
+            <svg
+              width="100"
+              height="100"
+              viewBox="0 0 100 100"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="rotate-15"
+            >
+              <path
+                d="M15 70C22 35 50 17 78 34C84 38 87 44 88 50"
+                stroke="#d9ff70"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+              />
+
+              <path
+                d="M79 42L89 51L76 52"
+                stroke="#d9ff70"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.45 }}
+            className="absolute right-2 top-28.75 z-30 hidden items-start gap-12 md:flex"
+          >
+            <div>
+              <p className="text-3xl font-semibold tracking-tight text-white">
+                97%
+              </p>
+
+              <p className="mt-1 text-[11px] text-white/45">
+                Revenue growth
+              </p>
+            </div>
+
+            <div>
+              <p className="text-3xl font-semibold tracking-tight text-white">
+                16Y
+              </p>
+
+              <p className="mt-1 text-[11px] text-white/45">
+                Experience
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50, y: 30 }}
+            animate={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="absolute right-0 top-58.75 z-30 hidden w-60 md:block"
+          >
+            <div className="rounded-[20px] border border-white/[0.07] bg-[#151515] p-5 shadow-[0_25px_80px_rgba(0,0,0,0.35)]">
+              <div className="mb-8 flex items-center justify-between">
+                <div className="h-8 w-8 rounded-full bg-white/6 p-2">
+                  <ArrowUpRight
+                    size={15}
+                    className="text-[#d9ff70]"
+                  />
+                </div>
+
+                <span className="text-[9px] uppercase tracking-[0.2em] text-white/25">
+                  Since 2013
+                </span>
+              </div>
+
+              <h3 className="text-sm font-medium text-white">
+                Personal Investment
+              </h3>
+
+              <h3 className="text-sm font-medium text-white">
+                Trade
+              </h3>
+
+              <p className="mt-4 text-[11px] leading-[1.6] text-white/35">
+                Since 2013, we&apos;ve guided millions
+                of global users on their digital
+                assets journey.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* =====================================================
+              RIGHT TECH STACK
+          ====================================================== */}
+
+
+
+          {/* =====================================================
+              MOBILE SIDE CARDS
+          ====================================================== */}
+
+          <div className="mt-10 grid grid-cols-2 gap-3 md:hidden">
+            <MobileStat
+              value="10.2k+"
+              label="Active users"
+            />
+
+            <MobileStat
+              value="97%"
+              label="Revenue growth"
+            />
+
+            <MobileStat
+              value="16Y"
+              label="Experience"
+            />
+
+            <MobileStat
+              value="5★"
+              label="Client rating"
+            />
+          </div>
         </div>
-        
-        <div className="rounded-lg border border-white/10 bg-white/2 px-4 py-2 backdrop-blur-md text-white/70">
-          Dhaka · Bangladesh
-        </div>
-      </motion.div>
+
+      </div>
     </section>
+  );
+}
+
+
+
+
+function MobileStat({
+  value,
+  label,
+}: {
+  value: string;
+  label: string;
+}) {
+  return (
+    <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-4">
+      <p className="text-xl font-semibold tracking-tight text-white">
+        {value}
+      </p>
+
+      <p className="mt-1 text-[9px] uppercase tracking-wider text-white/35">
+        {label}
+      </p>
+    </div>
   );
 }
