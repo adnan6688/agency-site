@@ -26,7 +26,7 @@ export default function Navbar() {
           href="/"
           className="font-viga text-2xl tracking-wide text-white"
         >
-          AGENCY<span className="text-[#CFFF92]">.</span>
+        Orivian<span className="text-[#CFFF92]">Soft.</span>
         </Link>
 
         {/* Desktop Navigation */}

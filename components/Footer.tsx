@@ -58,7 +58,7 @@ export default function Footer() {
                 <span className="h-3 w-3 rounded-full bg-[#CFFF92] transition-transform duration-300 group-hover:scale-125" />
 
                 <span className="font-viga text-3xl uppercase tracking-[-0.04em] text-white">
-                  Your<span className="text-[#CFFF92]">Agency</span>
+                  Orivian<span className="text-[#CFFF92]">Soft</span>
                 </span>
               </a>
 
@@ -146,7 +146,7 @@ export default function Footer() {
         <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 text-[10px] uppercase tracking-[0.15em] text-white/25 md:flex-row md:items-center md:justify-between">
 
           <p>
-            © {new Date().getFullYear()} YourAgency. All rights reserved.
+            © {new Date().getFullYear()} OrivianSoft. All rights reserved.
           </p>
 
           <div className="flex items-center gap-6">

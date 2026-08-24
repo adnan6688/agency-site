@@ -90,8 +90,8 @@ export default function PageLoader() {
                   </p>
 
                   <h1 className="font-viga text-4xl uppercase leading-none sm:text-[70px] md:text-[90px] lg:text-[110px] xl:text-[130px]">
-    OrivianSoft
-    <span className="text-[#CFFF92]">AGENCY</span>
+    Orivian
+    <span className="text-[#CFFF92]">Soft</span>
 </h1>
 
                   <motion.div
