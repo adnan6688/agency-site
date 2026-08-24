@@ -89,10 +89,10 @@ export default function PageLoader() {
                     Welcome to
                   </p>
 
-                  <h1 className="font-viga text-[clamp(55px,10vw,130px)] uppercase leading-none ">
-                    OrivianSoft
-                    <span className="text-[#CFFF92]">AGENCY</span>
-                  </h1>
+                  <h1 className="font-viga text-4xl uppercase leading-none sm:text-[70px] md:text-[90px] lg:text-[110px] xl:text-[130px]">
+    OrivianSoft
+    <span className="text-[#CFFF92]">AGENCY</span>
+</h1>
 
                   <motion.div
                     initial={{ width: 0 }}
