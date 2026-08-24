@@ -14,7 +14,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#050505] text-white">
-    
+
 
       {/* Top border */}
       <div className="absolute left-6 right-6 top-5 h-px bg-white/15 md:left-12 md:right-12" />
@@ -50,7 +50,7 @@ export default function Hero() {
 
 
       <div className="relative z-10 mx-auto min-h-screen max-w-375 px-5 pb-24 pt-16 sm:px-8 md:px-12 lg:px-16">
- 
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -72,9 +72,9 @@ export default function Hero() {
           </h1>
         </motion.div>
 
-     
+
         <div className="relative mx-auto mt-8 min-h-147.5 max-w-312.5">
-  
+
           <motion.a
             href="#contact"
             initial={{ opacity: 0, x: -40 }}
@@ -93,19 +93,19 @@ export default function Hero() {
                 size={15}
                 className="text-[#d9ff70]"
               />
-<div>
-  <p className="text-[12px] font-medium text-white">
-    Let&apos;s Connect
-  </p>
+              <div>
+                <p className="text-[12px] font-medium text-white">
+                  Let&apos;s Connect
+                </p>
 
-  <p className="text-[10px] text-white/40">
-    Get in Touch
-  </p>
-</div>
+                <p className="text-[10px] text-white/40">
+                  Get in Touch
+                </p>
+              </div>
             </div>
           </motion.a>
 
-      
+
           <motion.div
             initial={{ opacity: 0, x: -50, y: 30 }}
             animate={{ opacity: 1, x: 0, y: 0 }}
@@ -113,23 +113,26 @@ export default function Hero() {
             className="absolute left-0 top-47.5 z-30 hidden w-61.25 md:block"
           >
             <div className="relative rounded-[18px] bg-[#d9ff70] p-5 text-black shadow-[0_20px_70px_rgba(217,255,112,0.08)]">
+
               {/* little arrow */}
               <div className="absolute -right-1 -top-1 flex h-12 w-12 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#303030] text-white">
                 <ArrowRight size={17} />
               </div>
 
+              {/* heading */}
               <div>
                 <p className="text-3xl font-bold tracking-tight">
-                  10.2k+
+                  6+
                 </p>
 
                 <p className="mt-1 text-[10px] font-medium text-black/55">
-                  Active users around the world
+                  Creative minds, one shared vision
                 </p>
               </div>
 
               <div className="mt-5 flex items-center justify-between">
-                {/* avatars */}
+
+                {/* team avatars */}
                 <div className="flex items-center">
                   <div className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#d9ff70] bg-[#222] text-[10px] font-bold text-white">
                     A
@@ -139,8 +142,8 @@ export default function Hero() {
                     R
                   </div>
 
-                  <div className="-ml-3 flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#d9ff70] bg-[#999] text-[10px] font-bold text-black">
-                    M
+                  <div className="-ml-3 flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#d9ff70] bg-[#888] text-[10px] font-bold text-white">
+                    G
                   </div>
 
                   <div className="-ml-3 flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#d9ff70] bg-[#eee] text-[9px] font-bold text-black">
@@ -148,24 +151,23 @@ export default function Hero() {
                   </div>
                 </div>
 
-                {/* rating */}
+                {/* vision */}
                 <div className="flex items-center gap-2">
-                  <Star
-                    size={23}
-                    fill="currentColor"
-                    strokeWidth={0}
-                  />
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#303030] text-[#d9ff70]">
+                    <Star size={15} fill="currentColor" strokeWidth={0} />
+                  </div>
 
                   <div>
-                    <p className="text-lg font-bold leading-none">
-                      5
+                    <p className="text-sm font-bold leading-none">
+                      01
                     </p>
 
                     <p className="text-[9px] font-medium text-black/60">
-                      Stars
+                      Vision
                     </p>
                   </div>
                 </div>
+
               </div>
             </div>
           </motion.div>
@@ -231,32 +233,32 @@ export default function Hero() {
               />
             </svg>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.45 }}
-            className="absolute right-2 top-28.75 z-30 hidden items-start gap-12 md:flex"
-          >
-            <div>
-              <p className="text-3xl font-semibold tracking-tight text-white">
-                97%
-              </p>
+    <motion.div
+  initial={{ opacity: 0, x: 40 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.7, delay: 0.45 }}
+  className="absolute right-2 top-28.75 z-30 hidden items-start gap-12 md:flex"
+>
+  <div>
+    <p className="text-3xl font-semibold tracking-tight text-white">
+      01
+    </p>
 
-              <p className="mt-1 text-[11px] text-white/45">
-                Revenue growth
-              </p>
-            </div>
+    <p className="mt-1 text-[11px] text-white/45">
+      Shared Vision
+    </p>
+  </div>
 
-            <div>
-              <p className="text-3xl font-semibold tracking-tight text-white">
-                16Y
-              </p>
+  <div>
+    <p className="text-3xl font-semibold tracking-tight text-white">
+      06
+    </p>
 
-              <p className="mt-1 text-[11px] text-white/45">
-                Experience
-              </p>
-            </div>
-          </motion.div>
+    <p className="mt-1 text-[11px] text-white/45">
+      Creative Minds
+    </p>
+  </div>
+</motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 50, y: 30 }}
@@ -265,6 +267,7 @@ export default function Hero() {
             className="absolute right-0 top-58.75 z-30 hidden w-60 md:block"
           >
             <div className="rounded-[20px] border border-white/[0.07] bg-[#151515] p-5 shadow-[0_25px_80px_rgba(0,0,0,0.35)]">
+
               <div className="mb-8 flex items-center justify-between">
                 <div className="h-8 w-8 rounded-full bg-white/6 p-2">
                   <ArrowUpRight
@@ -273,23 +276,23 @@ export default function Hero() {
                   />
                 </div>
 
-                <span className="text-[9px] uppercase tracking-[0.2em] text-white/25">
-                  Since 2013
+                <span className="text-[9px]  tracking-[0.2em] text-white/25">
+                  Since 2026
                 </span>
               </div>
 
               <h3 className="text-sm font-medium text-white">
-                Personal Investment
+                Ideas into
               </h3>
 
               <h3 className="text-sm font-medium text-white">
-                Trade
+                Digital Reality
               </h3>
 
               <p className="mt-4 text-[11px] leading-[1.6] text-white/35">
-                Since 2013, we&apos;ve guided millions
-                of global users on their digital
-                assets journey.
+                We&apos;re a new generation digital agency
+                focused on building meaningful products,
+                creative experiences, and scalable solutions.
               </p>
             </div>
           </motion.div>
