@@ -137,12 +137,12 @@ export default function Footer() {
           transition={{ duration: 0.8 }}
           className="overflow-hidden border-t border-white/10 pt-8"
         >
-          <p className="select-none whitespace-nowrap font-viga text-[clamp(4rem,13vw,12rem)] uppercase leading-[0.75] tracking-[-0.07em] text-white/4.5">
-            YourAgency
+          <p className="select-none whitespace-nowrap font-viga text-[clamp(4rem,13vw,12rem)] uppercase leading-[0.75] text-center tracking-[-0.07em] text-white/4.5">
+            OrivianSoft 
           </p>
         </motion.div>
 
-        {/* ================= BOTTOM ================= */}
+      
         <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 text-[10px] uppercase tracking-[0.15em] text-white/25 md:flex-row md:items-center md:justify-between">
 
           <p>

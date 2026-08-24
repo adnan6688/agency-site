@@ -43,8 +43,8 @@ export default function Hero() {
       </div>
 
       {/* Huge background typography */}
-      <div className="pointer-events-none absolute bottom-[8%] left-1/2 hidden -translate-x-1/2 select-none whitespace-nowrap text-[18vw] font-black uppercase leading-none tracking-[-0.08em] text-white/2.5 lg:block">
-        DIGITAL
+      <div className="pointer-events-none absolute bottom-[8%] left-1/2 hidden -translate-x-1/2 select-none whitespace-nowrap text-[14vw] font-black uppercase leading-none tracking-[-0.08em] text-white/2.5 lg:block">
+        OrivianSoft
       </div>
 
 
@@ -93,16 +93,15 @@ export default function Hero() {
                 size={15}
                 className="text-[#d9ff70]"
               />
+<div>
+  <p className="text-[12px] font-medium text-white">
+    Let&apos;s Connect
+  </p>
 
-              <div>
-                <p className="text-[12px] font-medium text-white">
-                  Appointment
-                </p>
-
-                <p className="text-[10px] text-white/40">
-                  Book Now
-                </p>
-              </div>
+  <p className="text-[10px] text-white/40">
+    Get in Touch
+  </p>
+</div>
             </div>
           </motion.a>
 
@@ -295,15 +294,6 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* =====================================================
-              RIGHT TECH STACK
-          ====================================================== */}
-
-
-
-          {/* =====================================================
-              MOBILE SIDE CARDS
-          ====================================================== */}
 
           <div className="mt-10 grid grid-cols-2 gap-3 md:hidden">
             <MobileStat

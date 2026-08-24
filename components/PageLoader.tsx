@@ -90,7 +90,7 @@ export default function PageLoader() {
                   </p>
 
                   <h1 className="font-viga text-[clamp(55px,10vw,130px)] uppercase leading-none ">
-                    YOUR
+                    OrivianSoft
                     <span className="text-[#CFFF92]">AGENCY</span>
                   </h1>
 

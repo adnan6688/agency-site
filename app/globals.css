@@ -24,3 +24,8 @@ h4 {
   --font-viga: var(--font-viga);
   --font-inter: var(--font-inter);
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
