@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 const teamMembers = [
-     {
+    {
         name: "Ahnaf Shakil",
         role: "Android App Developer",
         image: "/ahnaf.png",
     },
-      {
+    {
         name: "Rafiul Islam",
         role: "UI/UX Designer",
         image: "/rafiul.png",
@@ -29,13 +29,13 @@ const teamMembers = [
         role: "Backend Developer",
         image: "/nayem.png",
     },
-   
+
     {
         name: "Canedey Udoy",
         role: "AI Developer",
         image: "/udoy.png",
     },
-  
+
 ];
 
 export default function Team() {
@@ -43,7 +43,6 @@ export default function Team() {
         <section id="team" className="bg-black px-6 py-28 md:py-10">
             <div className="mx-auto max-w-7xl">
 
-                {/* ================= HEADER ================= */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -99,7 +98,7 @@ export default function Team() {
                             {/* ================= CARD ================= */}
                             <div className="relative pr-12">
                                 {/* Main Shape */}
-                                <div className="relative aspect-[4/5] overflow-hidden rounded-4xl bg-[#111]">
+                                <div className="relative aspect-4/5 overflow-hidden rounded-4xl bg-[#111]">
 
                                     {/* Image */}
                                     <motion.img
@@ -116,22 +115,39 @@ export default function Team() {
                                     <div className="absolute bottom-0 right-0 h-24 w-24 rounded-tl-[3rem] bg-black" />
 
                                     {/* Arrow Button */}
-                                  <div
-  className="absolute bottom-0 right-0 flex h-20 w-20 scale-95 items-center justify-center rounded-tl-[2.5rem] 
-  bg-linear-to-br from-[#E5FFB8] via-[#CFFF92] to-[#B8F86B]
-  text-black
-  shadow-[0_0_25px_rgba(207,255,146,0.35)]
-  transition-all duration-500
-  opacity-0 
-  group-hover:opacity-100
-  group-hover:scale-100
-  group-hover:shadow-[0_0_40px_rgba(207,255,146,0.55)]"
+                               <div
+    className="
+        absolute bottom-0 right-0
+        flex h-20 w-20
+        items-center justify-center
+        rounded-tl-[2.5rem]
+
+        bg-linear-to-br from-[#E5FFB8] via-[#CFFF92] to-[#B8F86B]
+        text-black
+        shadow-[0_0_25px_rgba(207,255,146,0.35)]
+
+        transition-all duration-500
+
+        opacity-100
+        scale-100
+
+        md:opacity-0
+        md:scale-95
+
+        md:group-hover:opacity-100
+        md:group-hover:scale-100
+        md:group-hover:shadow-[0_0_40px_rgba(207,255,146,0.55)]
+    "
 >
-  <ArrowUpRight
-    size={28}
-    strokeWidth={2}
-    className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-  />
+    <ArrowUpRight
+        size={28}
+        strokeWidth={2}
+        className="
+            transition-transform duration-300
+            md:group-hover:translate-x-1
+            md:group-hover:-translate-y-1
+        "
+    />
 </div>
                                 </div>
 
@@ -150,19 +166,19 @@ export default function Team() {
                             </div>
 
                             {/* ================= ROLE ================= */}
-                         <div className="mt-5 flex items-center justify-between pr-12">
-  <div className="group/role flex items-center gap-3">
-    <span className="relative h-1.5 w-1.5 rounded-full bg-[#CFFF92] shadow-[0_0_8px_rgba(207,255,146,0.6)]" />
+                            <div className="mt-5 flex items-center justify-between pr-12">
+                                <div className="group/role flex items-center gap-3">
+                                    <span className="relative h-1.5 w-1.5 rounded-full bg-[#CFFF92] shadow-[0_0_8px_rgba(207,255,146,0.6)]" />
 
-    <p className="text-sm font-semibold text-white/85 transition-colors duration-300 group-hover/role:text-[#CFFF92]">
-      {member.role}
-    </p>
-  </div>
+                                    <p className="text-sm font-semibold text-white/85 transition-colors duration-300 group-hover/role:text-[#CFFF92]">
+                                        {member.role}
+                                    </p>
+                                </div>
 
-  <span className="text-xs font-medium tabular-nums text-white/25">
-    {String(index + 1).padStart(2, "0")}
-  </span>
-</div>
+                                <span className="text-xs font-medium tabular-nums text-white/25">
+                                    {String(index + 1).padStart(2, "0")}
+                                </span>
+                            </div>
                         </motion.article>
                     ))}
                 </div>
